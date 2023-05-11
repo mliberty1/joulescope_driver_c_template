@@ -50,12 +50,12 @@
 #define MAX_DEVICES_LENGTH (4096U)
 
 // Macro to return from the current function on error
-#define ROE(x) do {                                     \
-    int32_t rc__ = (x);                                 \
-    if (0 != rc__) {                                    \
-        printf(ERROR_PREFIX "%s returned %ld\n", #x, rc__); \
-        return (int) rc__;                              \
-    }                                                   \
+#define ROE(x) do {                                                 \
+    int32_t rc__ = (x);                                             \
+    if (0 != rc__) {                                                \
+        printf(ERROR_PREFIX "%s returned %d\n", #x, (int) rc__);    \
+        return (int) rc__;                                          \
+    }                                                               \
 } while (0)
 
 #define ARG_CONSUME() --argc; ++argv
