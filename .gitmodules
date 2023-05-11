@@ -1,0 +1,4 @@
+[submodule "third-party/joulescope_driver"]
+	path = third-party/joulescope_driver
+	url = https://github.com/jetperch/joulescope_driver.git
+
